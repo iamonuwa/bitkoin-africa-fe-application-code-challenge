@@ -33,6 +33,7 @@
     "rxjs": "^5.4.2",
     "@nguniversal/express-engine": "^1.0.0-beta.3",
     "@nguniversal/module-map-ngfactory-loader": "^1.0.0-beta.3",
+    "ts-loader": "^2.3.7",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -52,7 +53,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
-    "ts-loader": "^2.3.7",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
   }
