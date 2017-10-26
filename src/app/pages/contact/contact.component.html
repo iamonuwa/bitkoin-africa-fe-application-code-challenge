@@ -12,7 +12,9 @@
 			</div>
 			<div class="form-group">
 				<input type="email" class="form-control" formControlName="repeat_email" id="repeat_email" name="repeat_email" placeholder="Repeat Email Address again" required>
-				<div class="alert alert-danger" [hidden]="!((contactForm.controls.repeat_email.errors?.MatchEmail) && !(contactForm.controls['repeat_email'].pristine))">Email Address does not match</div>
+				<small [hidden]="!(contactForm.controls['repeat_email'].errors?.MatchEmail ) || (contactForm.controls['repeat_email'].pristine )" class="text-danger">
+                                        Email Address is not Valid.
+                                      </small>
 			</div>
             <div class="form-group">
             	<textarea class="form-control" formControlName="message" style="resize: none" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7">

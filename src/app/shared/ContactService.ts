@@ -5,6 +5,6 @@ import { isPlatformBrowser } from '@angular/common';
 export class ContactService {
 	
 	saveContact(form) {
-		window.localStorage.setItem('contact', JSON.stringify(form));
+		// window.localStorage.setItem('contact', JSON.stringify(form));
 	}
 }

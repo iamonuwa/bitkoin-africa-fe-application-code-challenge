@@ -13,13 +13,13 @@ import {
 
 export class ContactComponent implements OnInit{
 
-	private contactForm: FormGroup;
+	public contactForm: FormGroup;
 
 	constructor(
-		private titleService: Title,
-		private metaService: Meta,
-		private contactService: ContactService,
-		private formBuilder: FormBuilder
+		public titleService: Title,
+		public metaService: Meta,
+		public contactService: ContactService,
+		public formBuilder: FormBuilder
 	) {
 		this.titleService.setTitle(`Bitkoin - Contact Us`);
 		this.metaService.updateTag({name: 'description', content: 'Contact Bitkoin Job Challenge Page'});

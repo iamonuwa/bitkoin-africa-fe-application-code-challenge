@@ -1,4 +1,5 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';  
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { ContactComponent } from './contact.component';
@@ -12,6 +13,7 @@ import { ContactService } from '../../shared/index';
   ],
   imports: [
   	ReactiveFormsModule,
+    CommonModule,
 	  ContactRoutingModule
   ],
   providers: [
