@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-about',
@@ -7,5 +8,14 @@ import { Component } from '@angular/core';
 })
 
 export class AboutComponent {
+
+	constructor(
+		private titleService: Title,
+		private metaService: Meta
+		) {
+		this.titleService.setTitle(`Bitkoin - About Us`);
+		this.metaService.updateTag({name: 'description', content: 'About Bitkoin Job Challenge Page'});
+	}
+
 
 }
