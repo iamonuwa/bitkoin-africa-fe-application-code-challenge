@@ -8,7 +8,7 @@ import { ContactRoutingModule } from './contact.routing';
     ContactComponent
   ],
   imports: [
-	  ContactRoutingModule
+	ContactRoutingModule
   ],
   providers: [],
 })
