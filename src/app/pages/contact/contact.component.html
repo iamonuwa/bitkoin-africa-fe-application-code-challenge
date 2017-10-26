@@ -1,1 +1,27 @@
-<p>Contact Page</p>
+<div class="container">
+<div class="col-md-12">
+    <div class="form-area">  
+        <form role="form" [formGroup]="contactForm" (ngSubmit)="submit(contactForm.value)" novalidate autocomplete="off">
+        <br style="clear:both">
+            <h3 style="margin-bottom: 25px; text-align: center;">Contact Us</h3>
+			<div class="form-group">
+				<input type="text" class="form-control" formControlName="fullname" id="fullname" name="fullname" placeholder="Full Name" required>
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-control" formControlName="email" id="email" name="email" placeholder="Email Address" required>
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-control" formControlName="repeat_email" id="repeat_email" name="repeat_email" placeholder="Repeat Email Address again" required>
+				<div class="alert alert-danger" [hidden]="!((contactForm.controls.repeat_email.errors?.MatchEmail) && !(contactForm.controls['repeat_email'].pristine))">Email Address does not match</div>
+			</div>
+            <div class="form-group">
+            	<textarea class="form-control" formControlName="message" style="resize: none" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7">
+            	</textarea>
+            </div>
+    		<div class="text-right">
+				<button type="submit" [disabled]="contactForm.invalid" class="btn btn-primary pull-right">Submit Form</button>
+			</div>
+        </form>
+    </div>
+</div>
+</div>
